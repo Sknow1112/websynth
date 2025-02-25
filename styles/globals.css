@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.synth-container {
+    @apply relative w-[900px] mx-auto;
+    transform-style: preserve-3d;
+}
+
+.synth-body {
+    @apply bg-gray-800 rounded-xl border-2 border-red-500/30 overflow-hidden;
+    box-shadow:
+        0 0 30px rgba(239, 68, 68, 0.3),
+        inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.synth-panel {
+    @apply p-6 space-y-4;
+}
+
+.synth-title {
+    @apply text-2xl font-bold text-red-500 text-center tracking-wider;
+    text-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+}
+
+.controls-grid {
+    @apply grid grid-cols-[1fr_2fr_1fr] gap-6 mb-4;
+}
+
+.input-section {
+    @apply space-y-4;
+}
+
+.upload-container {
+    @apply relative;
+}
+
+.file-input {
+    @apply sr-only;
+}
+
+.upload-button {
+    @apply px-4 py-2 bg-gray-700 text-red-400 rounded-full
+    border border-red-500/30 text-sm font-semibold
+    hover:bg-red-500/20 transition-colors
+    cursor-pointer block text-center;
+}
+
+.parameter-grid {
+    @apply grid grid-cols-2 gap-4;
+}
+
+.parameter-control {
+    @apply bg-black/30 p-3 rounded-lg border border-red-500/10;
+}
+
+.parameter-control label {
+    @apply block text-gray-300 text-xs mb-2 flex justify-between;
+}
+
+.value-display {
+    @apply text-red-400;
+}
+
+.parameter-slider {
+    @apply w-full h-1 bg-gray-700 rounded-lg appearance-none cursor-pointer;
+}
+
+.parameter-slider::-webkit-slider-thumb {
+    @apply appearance-none w-3 h-3 bg-red-500 rounded-full cursor-pointer;
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+}
+
+.keys-grid {
+    @apply grid grid-cols-7 gap-1;
+}
+
+.key {
+    @apply aspect-square bg-gray-700 rounded flex items-center justify-center
+    border border-red-500/20 text-gray-300 text-xs font-mono
+    transition-all duration-100;
+}
+
+.key-active {
+    @apply bg-red-500/50 text-white border-red-500;
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.5);
+}
+
+.record-button {
+    @apply px-4 py-2 bg-gray-700 text-red-400 rounded-full
+    border border-red-500/30 text-sm font-semibold
+    hover:bg-red-500/20 transition-colors;
+}
+
+.record-button.recording {
+    @apply bg-red-500 text-white animate-pulse;
+}
+
+.export-button {
+    @apply px-4 py-2 bg-gray-700 text-red-400 rounded-full
+    border border-red-500/30 text-sm font-semibold
+    hover:bg-red-500/20 transition-colors
+    disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.export-button.processing {
+    background-color: rgb(239, 68, 68, 0.5);
+    cursor: wait;
+}
+
+.visualizer-section {
+    @apply col-span-3;
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@layer utilities {
+    .perspective-2000 {
+        perspective: 2000px;
+    }
+    .rotate-x-2 {
+        transform: rotateX(2deg);
+    }
+}
