@@ -130,3 +130,133 @@
         transform: rotateX(2deg);
     }
 }
+
+.generate-button {
+    @apply px-4 py-2 bg-gray-700 text-red-400 rounded-full
+  border border-red-500/30 text-sm font-semibold
+  hover:bg-red-500/20 transition-colors
+  cursor-pointer block text-center w-full;
+}
+
+.generator-panel {
+    @apply mt-4 p-3 bg-black/30 rounded-lg border border-red-500/10;
+}
+
+.prompt-container {
+    @apply mb-3;
+}
+
+.prompt-label {
+    @apply block text-gray-300 text-xs mb-2;
+}
+
+.prompt-input {
+    @apply w-full bg-gray-800 border border-red-500/20 rounded p-2 text-sm text-gray-200
+  focus:outline-none focus:border-red-500 resize-none h-20;
+}
+
+.submit-button {
+    @apply px-4 py-2 bg-red-500/30 text-red-100 rounded-full
+  border border-red-500/50 text-sm font-semibold
+  hover:bg-red-500/50 transition-colors
+  disabled:opacity-50 disabled:cursor-not-allowed
+  w-full;
+}
+
+.submit-button.generating {
+    @apply animate-pulse bg-red-500/50;
+}
+
+.notification-bar {
+    @apply mb-4 p-2 bg-red-500/20 border border-red-500/30 rounded-lg
+  text-center text-sm text-red-100 animate-fade-in-out;
+}
+
+.status-message {
+    @apply mt-3 text-xs text-center text-gray-400;
+}
+
+.error-message {
+    @apply mt-3 text-xs text-center text-red-400;
+}
+
+@keyframes fade-in-out {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    10%,
+    90% {
+        opacity: 1;
+    }
+}
+
+.animate-fade-in-out {
+    animation: fade-in-out 3s ease-in-out;
+}
+
+/* Add these styles to your globals.css file */
+
+.generate-button {
+    @apply px-4 py-2 bg-gray-700 text-red-400 rounded-full
+  border border-red-500/30 text-sm font-semibold
+  hover:bg-red-500/20 transition-colors
+  cursor-pointer block text-center w-full;
+}
+
+.generator-panel {
+    @apply mt-4 p-3 bg-black/30 rounded-lg border border-red-500/10;
+}
+
+.prompt-container {
+    @apply mb-3;
+}
+
+.prompt-label {
+    @apply block text-gray-300 text-xs mb-2;
+}
+
+.prompt-input {
+    @apply w-full bg-gray-800 border border-red-500/20 rounded p-2 text-sm text-gray-200
+  focus:outline-none focus:border-red-500 resize-none h-20;
+}
+
+.submit-button {
+    @apply px-4 py-2 bg-red-500/30 text-red-100 rounded-full
+  border border-red-500/50 text-sm font-semibold
+  hover:bg-red-500/50 transition-colors
+  disabled:opacity-50 disabled:cursor-not-allowed
+  w-full;
+}
+
+.submit-button.generating {
+    @apply animate-pulse bg-red-500/50;
+}
+
+.notification-bar {
+    @apply mb-4 p-2 bg-red-500/20 border border-red-500/30 rounded-lg
+  text-center text-sm text-red-100 animate-fade-in-out;
+}
+
+.status-message {
+    @apply mt-3 text-xs text-center text-gray-400;
+}
+
+.error-message {
+    @apply mt-3 text-xs text-center text-red-400;
+}
+
+@keyframes fade-in-out {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    10%,
+    90% {
+        opacity: 1;
+    }
+}
+
+.animate-fade-in-out {
+    animation: fade-in-out 3s ease-in-out;
+}
