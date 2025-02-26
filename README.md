@@ -1,6 +1,6 @@
 # Websynth
 
-A web-based synthesizer built with Next.js and Web Audio API.
+A web-based synthesizer built with Next.js and Web Audio API. It uses AI to generate new sounds!
 
 ## Setup Instructions
 
@@ -37,6 +37,7 @@ The application will be available at http://localhost:1772
 - Octave control
 - Keyboard mapping for musical notes
 - Support for m4a audio samples
+- AI API on the backend using Gradio
 
 ## Controls
 
